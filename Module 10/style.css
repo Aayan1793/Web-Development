@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(8, 8, 201);
+    background-image: linear-gradient(to bottom, rgb(8, 8, 201), rgb(3, 3, 107));
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-family: Arial, sans-serif
+}
+.page-header {
+    background-image: linear-gradient(to right, rgb(191, 9, 191), rgb(236, 127, 87));
+    border-radius: 16px;
+    text-align: center;
+    color: rgb(255, 246, 246);
+}
+.fact-card {
+    background-color: rgb(67, 33, 155);
+    border-radius: 12px;
+    color: rgb(254, 249, 249);
+}
+.fact-card {
+    color: rgb(231, 130, 93);
+}  
+.footer-text {
+    text-align: center;
+    color: rgb(246, 137, 98);
+} 
