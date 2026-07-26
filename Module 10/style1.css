@@ -1,0 +1,81 @@
+#div-1{
+    width:50px;
+    height:50px;
+    background-color:red;
+    /* animation: name duration timing-function delay iteration-count direction; */
+
+    animation-name: moveright;
+    animation-duration:3s;
+    animation-iteration-count:3;
+    animation-direction: alternate;
+    animation-delay:2s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes moveright{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
+
+#div-2{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+}
+
+#div-3{
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.4);
+
+    }
+}
+
+#div-4{
+    width:50px;
+    height:50px;
+    background-color:pink;
+    animation: changecolor 3s infinite;
+}
+
+@keyframes changecolor{
+    0%{
+        background-color:blue;
+    }
+    25%{
+        background-color:aqua;
+      }
+    50%{
+        background-color: green;
+    }
+    75%{
+        background-color: yellow;
+    }
+    100%{
+        background-color:purple;
+    }
+}
