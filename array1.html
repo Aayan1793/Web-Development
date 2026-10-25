@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student and Colours</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f2;
+            padding: 20px;
+        }
+
+        h2 {
+            color: tomato;
+        }
+
+        .card {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 2px 6px #ccc;
+        }
+
+        h3 {
+            color: #ff6347;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript Objects, Data Structure and Array</h2>
+    <p>Learn about student details, colours, and array methods!</p>
+
+    <div class="card">
+        <h3>Student Information</h3>
+        <p id="studentInfo"></p>
+    </div>
+
+    <div class="card">
+        <h3>Favourite Colours</h3>
+        <p id="colourInfo"></p>
+    </div>
+
+    <div class="card">
+        <h3>Array Methods</h3>
+        <p id="arrayInfo"></p>
+    </div>
+
+    <script>
+        // Create a student object
+        var student = {
+            name: 'Riya',
+            age: '12',
+            Grade: '7',
+            hobbies: 'Drawing',
+            fav_sport: 'Cricket'
+        };
+
+        // Create a colour array
+        var color = ["white", "black", "red", "green", "blue"];
+
+        // Display student information
+        document.getElementById("studentInfo").innerHTML =
+            "Student name is: " + student.name + "<br>" +
+            "Student age is: " + student.age + "<br>" +
+            "Student grade is: " + student.Grade + "<br>" +
+            "Student hobby is: " + student.hobbies + "<br>" +
+            "Favourite sport is: " + student.fav_sport;
+
+        // Display colours using index numbers
+        document.getElementById("colourInfo").innerHTML =
+            "First colour: " + color[0] + "<br>" +
+            "Second colour: " + color[1] + "<br>" +
+            "Third colour: " + color[2] + "<br>" +
+            "Fourth colour: " + color[3] + "<br>" +
+            "Fifth colour: " + color[4];
+
+        // Display array before popping
+        var result = "Before popping the colours are: " +
+            color.join("^") + "<br>";
+
+        // Display favourite colour
+        result += "My favourite colour is: " + color[3] + "<br>";
+
+        // Remove the last colour
+        color.pop();
+
+        // Display array after popping
+        result += "After popping the colours are: " +
+            color.join("*") + "<br>";
+
+        // Display array length
+        result += "Number of colours left: " + color.length;
+
+        document.getElementById("arrayInfo").innerHTML = result;
+    </script>
+
+</body>
+</html>
