@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>my playlist sorter</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <style>
+   body { background: lavender; }
+   h1, h3 { color: darkviolet; }
+   .box { background: white; color: darkviolet; }
+ </style>
+    </head>
+    <body>
+        <div class="container py-4">
+            
+        <h1 class="mb-1">my playlist sorter</h1>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">song names</h3>
+                <div id="nameResult" class="box p-3 mt-3 rounded"></div>
+                <div id="nameResult1" class="box p-3 mt-3 rounded"></div>
+            </div>
+        </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">Play Counts</h3>
+                <div id="countResult" class="box p-3 mt-3 rounded"></div>
+                <div id="countResult1" class="box p-3 mt-3 rounded"></div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3 class="card-title">label every play count</h3>
+                <div id="labelResult" class="box p-3 mt-3 rounded"></div>
+            </div>
+        </div>
+
+        <script>
+            var songs = ["Zoom", "Bounce", "Glow", "Rush", "Spark"];
+            var plays = [320, 85, 210, 50, 175];
+
+            document.getElementById("nameResult").innerHTML = "Songs Ascending: " + songs.sort();
+            document.getElementById("nameResult1").innerHTML = "Songs Descending: " + songs.reverse();
+
+            document.getElementById("countResult").innerHTML = "Most Played: "  + plays.sort(function(a,b) { return b-a});
+            document.getElementById("countResult1").innerHTML = "Least Played: " + plays.sort(function(a,b) {return a-b});
+
+            document.getElementById("labelResult").innerHTML = plays.map(function(c) {return c+" plays"});
+        </script>
+    </body>
+</html>
