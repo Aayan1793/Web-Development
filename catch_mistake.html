@@ -1,0 +1,48 @@
+<html>
+
+
+
+
+<head>
+   <title>Catch the Mistake</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+   <style>
+       body {
+           background: lightyellow;
+       }
+       h2 {
+           color: darkorange;
+       }
+       .box {
+           background: white;
+           color: darkorange;
+       }
+   </style>
+</head>
+<body>
+   <div class="container py-4">
+       <div class="card">
+           <div class="card-body">
+               <h2>Catch the Mistake</h2>
+               <input id="divIn" class="form-control mb-2" placeholder="Divide 100 by a number">
+               <button class="btn btn-warning" onclick="trySafe()">Try It!</button>
+               <div id="result" class="box p-3 mt-3 rounded">
+               </div>
+           </div>
+       </div>
+   </div>
+   
+   <script>
+    function trySafe() {
+        try {
+            var n = document.getElementById("divIn").value;
+            if (n === "" || isNaN(n)) {
+                throw "please enter a valid number!";
+            }
+            document.getElementById("result").innerText = `100 / ${n} = ${100 / Number(n)}`;
+        } catch (err) {
+            document.getElementById("result").innerText = "Error caught: "+ err;
+        }
+    }
+   </script>
+</body>
