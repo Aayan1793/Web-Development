@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>find and replace</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            body {background : lightyellow; }
+            h2 { color: darkorange; }
+            .box { background: white; color: darkorange; }
+        </style>
+    </head>
+    <body>
+        <div class="container py-4">
+            <div class="card">
+                <div class="card-body">
+                    <h2>find and replasce</h2>
+
+                    <p>the dragon flew over the big castle.</p>
+
+                    <input id="findW" class="form-control mb-2"
+                           placeholder="Find">
+
+                    <input id="swapW" class="form-control mb-2"
+                          placeholder="Replace">
+
+                    <button class="btn btn-warning" onclick="doSearch()">find</button>
+                    <button class="btn btn-warning" onclick="doReplace()">replace</button>
+
+                    <div id="result" class="box p-3 mt-3 rounded">
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var sen = "the dragon flew over the big castle.";
+
+            function doSearch() {
+                var w = document.getElementById("findW").value;
+                var p = sen.search(w);
+
+                document.getElementById("result").innerText =
+                   "Word found at position: "+ p;
+            }
+
+            function doReplace() {
+                var w = document.getElementById("findW").value;
+                var newW = document.getElementById("swapW").value;
+
+                document.getElementById("result").innerText =
+                    sen.replace(w, newW);
+            }
+        </script>
+    </body>
+</html>
