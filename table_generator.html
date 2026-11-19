@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Table</title>
+    </head>
+
+    <body>
+
+        <h2>Table Generate</h2>
+        <input type="number" id="num" placeholder="Enter a number">
+        <button onclick="generateTable()">Generate the table</button>
+        <div id="result"></div>
+
+        <script>
+            function generateTable() {
+            var number = document.getElementById("num").value
+            var result = document.getElementById("result")
+            result.innerHTML = "";
+            for (var i = 1; i <= 10; i++) {
+                var ans = number * i
+                result.innerHTML += number + "x" + i + "=" + ans +"<br>";
+            }
+        }
+
+        </script>
+    </body>
+</html>
