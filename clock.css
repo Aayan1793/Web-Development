@@ -1,0 +1,28 @@
+body {
+    background-color:lightblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.clock-box {
+    background-color:white;
+    border: 3px solid rgb(51, 130, 209);
+    border-radius:25px;
+    padding:40px;
+    text-align: center;
+    width: 50%;
+}
+
+h1 {
+    color: rgb(111, 35, 223);
+    margin-bottom: 35px;
+}
+
+.clock {
+    background-color: rgb(71, 23, 192);
+    color: rgb(99, 227, 109);
+    padding:25px;
+    border-radius:15px;
+}
