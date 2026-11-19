@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(219, 181, 219);
+    text-align: center;
+    padding-top: 100px;
+}
+
+.container {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+h1 {
+    color: rgb(128, 15, 128);
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: white;
+    margin: 3px;
+}
+
+#start {
+    background-color: green;
+}
+
+#stop {
+    background-color: red;
+}
+
+#reset {
+    background-color : purple;
+}
