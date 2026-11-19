@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Countdown</title>
+
+    <style>
+        body {
+            background: #ffe0d6;
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .card {
+            background: #fffaf5;
+            width: 80%;
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+            border: 3px solid pink;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #d95750;
+        }
+
+        button {
+            background: #ff477e;
+            color: white;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .box {
+            background: #fff0f5;
+            border: 2px dashed #ff6f91;
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 12px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <h1>🎂 My Birthday Countdown Checker</h1>
+
+        <button onclick="checkCountdown()">
+            Check Countdown
+        </button>
+
+        <div class="box">
+            <h3>Missing Details</h3>
+            <p id="missing"></p>
+        </div>
+
+        <div class="box">
+            <h3>Greeting</h3>
+            <p id="greeting"></p>
+        </div>
+
+        <div class="box">
+            <h3>Days Left</h3>
+            <p id="message"></p>
+        </div>
+
+        <div class="box">
+            <h3>Countdown</h3>
+            <p id="countdown"></p>
+        </div>
+
+    </div>
+
+    <script>
+
+        function checkCountdown() {
+
+            let friendName = "Zara";
+            let daysLeft = 3;
+
+            let giftIdea = null;
+            let cakeFlavour;
+
+            let missing = "";
+
+            if (giftIdea == null || cakeFlavour == null) {
+                missing = "Missing Details";
+            }
+            else {
+                missing = giftIdea + " " + cakeFlavour;
+            }
+
+            document.getElementById("missing").innerHTML = missing;
+
+            let hour = new Date().getHours();
+            let greeting;
+
+            if (hour < 12) {
+                greeting = "Good morning";
+            }
+            else if (hour < 17) {
+                greeting = "Good afternoon";
+            }
+            else {
+                greeting = "Good evening";
+            }
+
+            document.getElementById("greeting").innerHTML =
+                greeting + " " + friendName;
+
+            let message;
+
+            if (daysLeft == 0) {
+                message = "Today is the party";
+            }
+            else if (daysLeft == 1) {
+                message = "Tomorrow is the party";
+            }
+            else {
+                message = daysLeft + " days left until the party";
+            }
+
+            document.getElementById("message").innerHTML = message;
+
+            let countdown = "";
+
+            while (daysLeft >= 1) {
+
+                countdown = countdown + "Days left: " + daysLeft + "<br>";
+
+                daysLeft--;
+
+            }
+
+            countdown = countdown + "Party time!";
+
+            document.getElementById("countdown").innerHTML = countdown;
+
+        }
+
+    </script>
+
+</body>
+</html>
